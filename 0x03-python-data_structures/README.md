@@ -10,3 +10,15 @@ A README.md file, at the root of the folder of the project, is mandatory\
 Your code should use the pycodestyle (version 2.8.*)\
 All your files must be executable\
 The length of your files will be tested using wc\
+
+## TASKS
+0. Print a list of integers
+   Write a function that prints all integers of a list.
+
+Prototype: def print_list_integer(my_list=[]):
+Format: one integer per line. See example
+You are not allowed to import any module
+You can assume that the list only contains integers
+You are not allowed to cast integers into strings
+You have to use str.format() to print integers
+
