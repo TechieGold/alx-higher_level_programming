@@ -9,7 +9,7 @@ The first line of all your files should be exactly #!/usr/bin/python3\
 A README.md file, at the root of the folder of the project, is mandatory\
 Your code should use the pycodestyle (version 2.8.*)\
 All your files must be executable\
-The length of your files will be tested using wc\
+The length of your files will be tested using wc
 
 ## TASKS
 ## 0. Print a list of integers
@@ -20,7 +20,7 @@ Format: one integer per line. See example\
 You are not allowed to import any module\
 You can assume that the list only contains integers\
 You are not allowed to cast integers into strings\
-You have to use str.format() to print integers\
+You have to use str.format() to print integers
 
 ## 1. Secure access to an element in a list
    Write a function that retrieves an element from a list like in C.
@@ -29,7 +29,7 @@ Prototype: def element_at(my_list, idx):\
 If idx is negative, the function should return None\
 If idx is out of range (> of number of element in my_list), the function should return None\
 You are not allowed to import any module\
-You are not allowed to use try/except\
+You are not allowed to use try/except
 
 ## 2. Replace element\
  Write a function that replaces an element of a list at a specific position (like in C).\
