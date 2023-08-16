@@ -12,7 +12,7 @@ All your files must be executable\
 The length of your files will be tested using wc\
 
 ## TASKS
-## 0. Print a list of integers\
+## 0. Print a list of integers
    Write a function that prints all integers of a list.
 
 Prototype: def print_list_integer(my_list=[]):\
@@ -22,8 +22,8 @@ You can assume that the list only contains integers\
 You are not allowed to cast integers into strings\
 You have to use str.format() to print integers\
 
-## 1. Secure access to an element in a list\
-   Write a function that retrieves an element from a list like in C.\
+## 1. Secure access to an element in a list
+   Write a function that retrieves an element from a list like in C.
 
 Prototype: def element_at(my_list, idx):\
 If idx is negative, the function should return None\
