@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-A BaseGeometry class with public instance method.
+This module contains BaseGeometry class with public instance method.
 
-    meth:
-        area(self): raises an Exception with a message.
+public instance method:
+    area(self): raises an Exception with a message.
 """
 
 
 class BaseGeometry:
+    """BaseGeometry class."""
     def area(self):
-        """Raise a Exception"""
+        """Raise an Exception"""
         raise Exception("area() is not implemented")
