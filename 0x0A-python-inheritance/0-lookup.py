@@ -10,7 +10,7 @@ Return:
 """
 
 
-def lookup(obj):
+def lookup(obj: object):
     """Returns the list of available methods
     and attributes of an object"""
-    return (dir(type))
+    return (dir(obj))
