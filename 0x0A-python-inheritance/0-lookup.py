@@ -11,6 +11,6 @@ Return:
 
 
 def lookup(obj):
-    attributes_and_methods = dir(obj)
-
-    return (list(attributes_and_methods))
+    """Returns the list of available methods
+    and attributes of an object"""
+    return (dir(type))
