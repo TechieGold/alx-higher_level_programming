@@ -15,6 +15,8 @@ Returns:
 
 
 def is_kind_of_class(obj, a_class):
+    """check if an object is an instance of
+    inherited from a specified class."""
     if isinstance(obj, a_class):
         return (True)
     for base_class in obj.__class__.mro():
