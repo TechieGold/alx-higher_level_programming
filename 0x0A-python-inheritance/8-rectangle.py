@@ -10,6 +10,8 @@ Attributes:
     __width(private): the rectangle width. must be an int.
     __height(private): the rectangle height. must be an int.
 """
+
+
 class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         self.__width = width

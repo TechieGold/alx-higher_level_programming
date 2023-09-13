@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 Rectangle = __import__('9-rectangle').Rectangle
+
+
 class Square(Rectangle):
     """
     A square class that inherits from Rectangle class.
-    
+
     methods:
         __init__(self, size): Initializes a size attribute.
     Attributes:
