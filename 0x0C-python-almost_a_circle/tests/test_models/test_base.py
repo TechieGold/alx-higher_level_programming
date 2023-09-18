@@ -1,5 +1,5 @@
 import unittest
-from ./models.base import Base
+from .models.base import Base
 
 class TestBase(unittest.TestCase):
     def test_id_assignment_when_none(self):
