@@ -35,3 +35,23 @@ class Base:
         if not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    def save_to_file(cls, list_objs):
+        """ writes the JSON string representation of list_objs to a file.
+        Args:
+            list_objs(list): A list of instance to be saved.
+        Raises:
+            ValueError: if cls is not a subclass of Base.
+        """
+        if not isinstance(cls, Base):
+            raise ValueError("cls must be a subclass of Base")
+
+        if list_objs is None:
+            list_objs = []
+
+        file_name = f"{cls.__name__}.json"
+        json_str = cls.to_json_string(
+            [obj.to_dictionary() for obj in list_objs])
+
+        with open(file_name, 'w') as f:
+            f.write(json_str)
