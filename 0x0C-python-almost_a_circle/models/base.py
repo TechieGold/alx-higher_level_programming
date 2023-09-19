@@ -11,6 +11,7 @@ Methods:
 """
 import json
 
+
 class Base:
     """Base class"""
     __nb_objects = 0
@@ -22,12 +23,13 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     def to_json_string(list_dictionaries):
         """Convert a list of dictionary into a JSON string.
         Args:
             list_dictionaries (list): A list of dictionary to be converted.
-            
-        Returns: 
+
+        Returns:
             str: JSON string representation of list_dictionaries.
         """
         if not list_dictionaries:
