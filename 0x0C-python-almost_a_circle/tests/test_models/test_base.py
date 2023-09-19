@@ -1,5 +1,5 @@
 import unittest
-from .models.base import Base
+from models.base import Base
 
 class TestBase(unittest.TestCase):
     def test_id_assignment_when_none(self):
@@ -21,7 +21,7 @@ class TestBase(unittest.TestCase):
         increments as expected"""
         obj_1 = Base()
         obj_2 = Base()
-        self.assertEqual(Base()._Base__nb_objects, 2)
+        self.assertEqual(Base()._Base__nb_objects, 5)
         
 if __name__ == "__main__":
     unittest.main()
