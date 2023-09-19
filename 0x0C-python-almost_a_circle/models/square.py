@@ -42,3 +42,21 @@ class Square(Rectangle):
             f" {self.x}/{self.y} - {self.width}"
 
         )
+
+    def update(self, *args, **kwargs):
+        """
+        Update the Square attributes based on the provided
+        arguments or keyword arguments.
+
+        Args:
+            *args: Variable number of positional arguments (id, size, x, y).
+            **kwargs: Variable number of keyword arguments
+            representing attribute-value pairs.
+        """
+        if args:
+            arg_order = ['id', 'size', 'x', 'y']
+            for i, arg_value in enumerate(args):
+                setattr(self, arg_order[i], arg_value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
