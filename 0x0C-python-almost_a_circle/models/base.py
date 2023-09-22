@@ -57,3 +57,17 @@ class Base:
 
         with open(file_name, 'w') as f:
             f.write(json_str)
+
+    def from_json_string(json_string):
+        """
+        Convert a JSON strint into a list of dictionaries.
+
+        Args:
+           json_string (str): JSON string representing a list of dictionaries.
+
+       Returns:
+           list: List of dictionaries represented my json_string.
+        """
+        if not json_string:
+            return []
+        return json.loads(json_string)
