@@ -25,7 +25,8 @@ class Base:
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
-        """Convert a list of dictionary into a JSON string.
+        """
+        Convert a list of dictionary into a JSON string.
         Args:
             list_dictionaries (list): A list of dictionary to be converted.
 
@@ -36,6 +37,7 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @classmethod
     def save_to_file(cls, list_objs):
         """ writes the JSON string representation of list_objs to a file.
         Args:
@@ -43,15 +45,15 @@ class Base:
         Raises:
             ValueError: if cls is not a subclass of Base.
         """
-        if not isinstance(cls, Base):
+        if cls is not Base and not issubclass(cls, Base):
             raise ValueError("cls must be a subclass of Base")
 
         if list_objs is None:
             list_objs = []
 
         file_name = f"{cls.__name__}.json"
-        json_str = cls.to_json_string(
-            [obj.to_dictionary() for obj in list_objs])
+        dict_list = [obj.to_dictionary() for obj in list_objs]
+        json_str = cls.to_json_string(dict_list)
 
         with open(file_name, 'w') as f:
             f.write(json_str)
