@@ -92,3 +92,22 @@ class Base:
         # Use the update method to assign attributes from the dictionary
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Load a list of instances from a JSON file.
+        Returns:
+            list: List of instances loaded from the file.
+        """
+        file_name = f"{cls.__name__}.json"
+
+        try:
+            with open(file_name, 'r') as f:
+                json_str = f.read()
+        except FileNotFoundError:
+            return []
+
+        json_list = cls.from_json_string(json_str)
+        instances = [cls.create(**item) for item in json_list]
+        return instances
