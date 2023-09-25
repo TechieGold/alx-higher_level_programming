@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module contains a Square class with methods and attributes."""
+
+
 class Square:
     """
     This class defines a square.
@@ -17,7 +20,6 @@ class Square:
     def size(self):
         """
         Get or set the size of the square.
-
         Returns:
             int: The size of the square.
         """
@@ -42,18 +44,12 @@ class Square:
         self.__size = value
 
     def area(self):
-        """
-        Calculate the area of the square.
-
-        Returns:
-            int: The area of the square.
-        """
+        """Calculate and return the area of the square."""
         return self.__size ** 2
 
     def my_print(self):
         """
         Print the square using '#'.
-
         If size is 0, prints an empty line.
         """
         if self.__size == 0:
