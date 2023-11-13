@@ -4,8 +4,8 @@
     A script that prints the addition of 2 integers.
 
     prototype: function add(a, b)
-    The first argument is the first integer
-    The second argument is the second integer
+    The first argument (num1) is the first integer
+    The second argument (num2) is the second integer
 */
 
 const add = (a, b) => a + b;
