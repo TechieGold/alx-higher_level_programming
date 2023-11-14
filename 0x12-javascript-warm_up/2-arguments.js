@@ -6,12 +6,6 @@
     If only one argument is passed to the script, print “Argument found”.
     Otherwise, print “Arguments found”
 */
-const argNo = process.argv.length - 2;
 
-if (argNo === 0) {
-  console.log('No argument ');
-} else if (argNo === 1) {
-  console.log('Argument found');
-} else {
-  console.log('Arguments found');
-}
+const count = process.argv.length;
+console.log(count === 2 ? 'No argument' : count === 3 ? 'Argument found' : 'Arguments found');
