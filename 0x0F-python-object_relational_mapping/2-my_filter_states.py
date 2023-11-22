@@ -4,6 +4,7 @@
 This script displays all values in the states table of hbtn_0e_0_usa
 where the name matches the provided argument.
 
+
 Usage: ./2-my_filter_states.py <mysql_username> <mysql_password>
 <database_name> <state_to_find>
 """
